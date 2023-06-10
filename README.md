@@ -11,7 +11,8 @@
 # Step-by-step on how to request a plugin!
 - [x] Made a request in the [Discord](https://discord.gg/55kXaX8zx4).
 - [x] Have a staff member look at your request and deem if it is possibile to be created.
-- [x] Once that is complete I will be tagged and we can discus your request! :tada:
+- [x] Once that is complete I will be tagged and we can discus your request! 🎉
+
 > All plugin data is sent over Discord, and Discord ONLY.
 > If you ever have a problem with your plugin feel free to make another ticket.
 
@@ -27,4 +28,4 @@
 
 
 ### This site updates very slowly, so changes may take a while to sync.
->Dragon Studio, 2023. Vers 2.0
+>Dragon Studio, 2023. Vers 2.2
