@@ -26,7 +26,9 @@
 >(Check back later as this may change!)
 
 #Partners!
-###
+### (---)
+>Co-Developer of Dragon Studio
+>Discord: FireClaw24#4521
 
 
 # Connect with me!
@@ -36,4 +38,4 @@
 
 
 ### This site updates very slowly, so changes may take a while to sync.
->Dragon Studio, 2023. Vers 2.3
+>Dragon Studio, 2023. Vers 2.4
