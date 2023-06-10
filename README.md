@@ -19,4 +19,4 @@
 
 
 ### This site updates very slowly, so changes may take a while to sync.
->Dragon Studio, 2023.
+>Dragon Studio, 2023. Vers 2.0
