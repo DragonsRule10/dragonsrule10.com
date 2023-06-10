@@ -8,9 +8,17 @@
 > Right now the only version I make plugins for is 1.19.4 and Forge.
 > As my software updates and forge adds support for 1.20, I will start making plugins for those versions.
 
+# Step-by-step on how to request a plugin!
+- [x] Made a request in the [Discord](https://discord.gg/55kXaX8zx4).
+- [x] Have a staff member look at your request and deem if it is possibile to be created.
+- [x] Once that is complete I will be tagged and we can discus your request! :tada:
+> All plugin data is sent over Discord, and Discord ONLY.
+> If you ever have a problem with your plugin feel free to make another ticket.
+
 ## Payment
 >As Dragon Studio is a starting busness, I need time to think about how payment will workout along with the pricing.
->Check back here later!
+>For now, all plugins/mods i make are free of charge.
+>(Check back later as this may change!)
 
 
 # Connect with me!
