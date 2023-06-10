@@ -26,8 +26,10 @@
 >(Check back later as this may change!)
 
 # Partners!
+
 ### (---)
 >Co-Developer of Dragon Studio
+>
 >Discord: FireClaw24#4521
 
 
