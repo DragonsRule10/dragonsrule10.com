@@ -30,6 +30,8 @@
 ### Captain Chaos
 >Co-Developer of Dragon Studio
 >
+>(aka ChaosFire11, and other usernames.)
+>
 >Discord: FireClaw24#4521
 
 
