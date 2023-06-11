@@ -27,7 +27,7 @@
 
 # Partners!
 
-### (---)
+### Captain Chaos
 >Co-Developer of Dragon Studio
 >
 >Discord: FireClaw24#4521
@@ -40,4 +40,4 @@
 
 
 ### This site updates very slowly, so changes may take a while to sync.
->Dragon Studio, 2023. Vers 2.4
+>Dragon Studio, 2023. Vers 2.5
