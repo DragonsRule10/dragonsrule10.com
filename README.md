@@ -26,7 +26,7 @@
 >(Check back later as this may change!)
 
 # Partners!
-
+> Partners can be people I have worked with, to companys that colabe with me!
 ### Captain Chaos
 >Co-Developer of Dragon Studio
 >
@@ -40,4 +40,4 @@
 
 
 ### This site updates very slowly, so changes may take a while to sync.
->Dragon Studio, 2023. Vers 2.5
+>Dragon Studio, 2023. Vers 2.6
