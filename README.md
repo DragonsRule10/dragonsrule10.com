@@ -21,9 +21,11 @@
 ## Payment
 >As Dragon Studio is a starting busness, I need time to think about how payment will workout along with the pricing.
 
->For now, all plugins/mods i make are free of charge.
+>For now, all plugins/mods we make are free of charge. (Ends July 1st!)
 
 >(Check back later as this may change!)
+
+### All money earned goes right back to Dragon Studio!
 
 # Partners!
 > Partners can be people I have worked with, to companys that colabe with me!
@@ -34,6 +36,8 @@
 >
 >Discord: FireClaw24#4521
 
+### (To become a partner in Dragon Studio please make a request in the Discord as we need a Dev team!)
+
 
 # Connect with me!
 > Feel free to join my [Discord Server](https://discord.gg/55kXaX8zx4) where I take my request at! 
@@ -42,4 +46,5 @@
 
 
 ### This site updates very slowly, so changes may take a while to sync.
->Dragon Studio, 2023. Vers 2.6
+>Dragon Studio, 2023. 
+>Website Vers 2.7
