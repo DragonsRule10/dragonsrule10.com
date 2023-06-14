@@ -28,13 +28,14 @@
 ### All money earned goes right back to Dragon Studio!
 
 # Partners!
-> Partners can be people I have worked with, to companys that colabe with me!
+> Partners can be people I have worked with, to companies that colab with me!
 ### Captain Chaos
 >Co-Developer of Dragon Studio
 >
 >(aka ChaosFire11, and other usernames.)
 >
->Discord: FireClaw24#4521
+>Talk to me in the Discord Server!
+
 
 ### (To become a partner in Dragon Studio please make a request in the Discord as we need a Dev team!)
 
@@ -42,9 +43,9 @@
 # Connect with me!
 > Feel free to join my [Discord Server](https://discord.gg/55kXaX8zx4) where I take my request at! 
 
-> Or contact my email at tristinkorbel@gmail.com (Please only send request to this email. Any question must be asked in the Discord if you want a anwser!)
+> Or contact my business email at tristinkorbel@gmail.com (Please only send request to this email. Any question must be asked in the Discord if you want a anwser!)
 
 
 ### This site updates very slowly, so changes may take a while to sync.
 >Dragon Studio, 2023. 
->Website Vers 2.7
+>Website Vers 2.8
