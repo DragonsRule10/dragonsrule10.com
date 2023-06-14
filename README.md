@@ -28,7 +28,7 @@
 ### All money earned goes right back to Dragon Studio!
 
 # Partners!
-> Partners can be people I have worked with, to companies that colab with me!
+> Partners can be people I have worked with, to companies that collab with me!
 ### Captain Chaos
 >Co-Developer of Dragon Studio
 >
