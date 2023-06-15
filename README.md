@@ -4,15 +4,15 @@
 ### I know how to make some website html, also some java/js.
 > If you ever have questions about me, feel free to ask!
 
-# Want a plugin for your Forge Server?
-> Right now the only version I make plugins for is 1.19.4 and Forge.
+# Want a plugin for your Forge Server, or a custom mod for your survival world?
+> Right now the only version we make plugins/mods for is 1.19.4 and Forge.
 
-> As my software updates and forge adds support for 1.20, I will start making plugins for those versions.
+> As my software updates and forge adds support for 1.20, I will start making plugins/mods for those versions.
 
 # Step-by-step on how to request a plugin!
 - [x] Made a request in the [Discord](https://discord.gg/55kXaX8zx4).
 - [x] Have a staff member look at your request and deem if it is possibile to be created.
-- [x] Once that is complete I will be tagged and we can discus your request! 🎉
+- [x] Once that is complete I will be tagged and we can discuss your request! 🎉
 
 > All plugin data is sent over Discord, and Discord ONLY.
 
@@ -25,7 +25,7 @@
 
 >(Check back later as this may change!)
 
-### All money earned goes right back to Dragon Studio!
+### 95% Of all money earned goes right back to Dragon Studio! 5% go back to profits/our Dev team!
 
 # Partners!
 > Partners can be people I have worked with, to companies that collab with me!
