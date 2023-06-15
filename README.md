@@ -43,9 +43,9 @@
 # Connect with me!
 > Feel free to join my [Discord Server](https://discord.gg/55kXaX8zx4) where I take my request at! 
 
-> Or contact my business email at tristinkorbel@gmail.com (Please only send request to this email. Any question must be asked in the Discord if you want a anwser!)
+> Or contact my business email [here.](mailto:tristinkorbel@gmail.com) (Please only send request to this email. Any question must be asked in the Discord if you want a anwser!)
 
 
 ### This site updates very slowly, so changes may take a while to sync.
 >Dragon Studio, 2023. 
->Website Vers 2.8
+>Website Vers 2.9
