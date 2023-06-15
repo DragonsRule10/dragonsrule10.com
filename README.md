@@ -41,7 +41,7 @@
 
 
 # Connect with me!
-> Feel free to join my [Discord Server](https://discord.gg/55kXaX8zx4) where I take my request at! 
+> Feel free to join my [Discord Server](https://discord.gg/55kXaX8zx4) where we take requests at! 
 
 > Or contact my business email [here.](mailto:tristinkorbel@gmail.com)
 
