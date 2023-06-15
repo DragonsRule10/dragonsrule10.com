@@ -1,7 +1,7 @@
 # Welcome.
 ## I'm Tristin, aka DragonsRule10.
 
-### I know how to make certain website html, also some javascript.
+### I know how to make some website html, also some java/js.
 > If you ever have questions about me, feel free to ask!
 
 # Want a plugin for your Forge Server?
@@ -37,13 +37,15 @@
 >Talk to me in the Discord Server!
 
 
-### (To become a partner in Dragon Studio please make a request in the Discord as we need a Dev team!)
+### (To become a partner in Dragon Studio please make a request in the Discord as we are in need a Dev team!)
 
 
 # Connect with me!
 > Feel free to join my [Discord Server](https://discord.gg/55kXaX8zx4) where I take my request at! 
 
-> Or contact my business email [here.](mailto:tristinkorbel@gmail.com) (Please only send request to this email. Any question must be asked in the Discord if you want a anwser!)
+> Or contact my business email [here.](mailto:tristinkorbel@gmail.com)
+
+> (Please only send request to this email. Any question must be asked in the Discord if you want a anwser!)
 
 
 ### This site updates very slowly, so changes may take a while to sync.
