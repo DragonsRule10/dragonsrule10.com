@@ -19,11 +19,12 @@
 > If you ever have a problem with your plugin feel free to make another ticket.
 
 ## Payment
->As Dragon Studio is a starting busness, I need time to think about how payment will workout along with the pricing.
+> Payment is done by the KB/2.
 
->For now, all plugins/mods we make are free of charge. (Ends July 1st!)
+> For instance, if a file you are sent is 12.44 KB, your charge is $6.22.
 
->(Check back later as this may change!)
+*For now, all plugins/mods we make are free of charge.
+>Get this amazing deal while it last!
 
 ### 95% Of all money earned goes right back to Dragon Studio! 5% go back to profits/our Dev team!
 
@@ -50,4 +51,4 @@
 
 ### This site updates very slowly, so changes may take a while to sync.
 >Dragon Studio, 2023. 
->Website Vers 2.9
+>Website Vers 3.0
