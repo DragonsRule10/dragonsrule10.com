@@ -41,24 +41,3 @@
   width: 300px;
   height: 300px;
 }
-
-
-/*Society Unites Custom CSS*/
-.dr1-su-admin-color {
-    color: rgb(204, 255, 102)
-}
-.dr1-su-sr-mod-color {
-    color: rgb(255, 153, 102)
-
-}
-
-.dr1-su-jr-mod-color {
-    color: rgb(153, 255, 204)
-
-}
-
-.dr1-su-helper-color {
-    color:rgb(255, 153, 255)
-
-}
-/*End SU Custom CSS*/
