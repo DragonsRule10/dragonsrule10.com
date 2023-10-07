@@ -76,6 +76,47 @@
     <hr style="width:200px" class="w3-opacity">
     <p>Hello, I'm Tristin. I make plugins and mods for small Minecraft Servers and worlds, I also know HTML. If you want to learn more head to the "Dragons Studio" section. I am usally always active on Discord so if you have a question ask there! Away from the desk, I love shooting arrows, I use a recurve bow, and my common distance is about 10ft. Biking is also a hobby, I love going on bike trails, no matter where. 
 
+
+<!--Time section-->
+      <h1 class="w3-center">Office hours</h1>
+      <ul>
+        <li>
+            <strong>Monday, Tuesday, Thrusday, Friday</strong> | 3:15pm - 8:15pm
+        </li>
+        <li>
+           <strong>Wendays</strong> | Barley Available.
+        </li>
+        <li>
+            <strong>Saturday, Sunday</strong> | Available mostly all day.
+        </li>
+    </ul>
+
+    <p>What time is it for me right now?</p>
+    <div id="cdt-time"></div>
+
+
+    <script>
+      function updateCDTTime() {
+          const currentTime = new Date();
+          const options = {
+              timeZone: 'America/Chicago',
+              hour: 'numeric',
+              minute: 'numeric',
+              second: 'numeric',
+              hour12: true,
+          };
+          const cdtTime = currentTime.toLocaleString('en-US', options);
+          document.getElementById('cdt-time').textContent = cdtTime;
+      }
+
+      // Update the time every second
+      setInterval(updateCDTTime, 1000);
+
+      // Initial update
+      updateCDTTime();
+  </script>
+
+
     </p>
     <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
     <p class="w3-wide">HTML</p>
