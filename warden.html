@@ -1,250 +1,103 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Warden | By Dragon Studio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size: 16px;}
-img {margin-bottom: -8px;}
-.mySlides {display: none;}
-</style>
-</head>
-<body class="w3-content w3-black" style="max-width:1500px;">
+  <head>
+    <title>DragonsRule10</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.discordapp.com/attachments/1138143016679383162/1150387319136854077/Dragon_10new.png" rel="shortcut icon" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+    .w3-row-padding img {margin-bottom: 12px}
+    /* Set the width of the sidebar to 120px */
+    .w3-sidebar {width: 120px;background: #222;}
+    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+    #main {margin-left: 120px}
+    /* Remove margins from "page content" on small screens */
+    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 
-<!-- Header with Slideshow -->
-<header class="w3-display-container w3-center">
-  <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button>
-  <div class="mySlides w3-animate-opacity">
-    <img class="w3-image" src="/assets/deleted_audit.png" alt="Image 1" style="min-width:500px" width="1500" height="1000">
-    <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
-      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
-        <h1 class="w3-xlarge">Deleted Messages</h1>
-        <hr class="w3-opacity">
-        <p>Get all the info you need at a glance with the Audit Log - Deleted Messages.</p>
-        <p><button class="w3-button w3-block w3-green w3-round" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button></p>
-      </div>
-    </div>
-  </div>
-  <div class="mySlides w3-animate-opacity">
-    <img class="w3-image" src="/assets/edited_audit.png" alt="Image 2" style="min-width:500px" width="1500" height="1000">
-    <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
-      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
-        <h1 class="w3-xlarge w3-text-red">Edited Messages</h1>
-        <hr class="w3-opacity">
-        <p>See the <b>before</b> and <b>after</b> of a Edited Message in your Audit Log.</p>
-        <p><button class="w3-button w3-block w3-red w3-round" onclick="document.getElementById('download').style.display='block'">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button></p>
-      </div>
-    </div>
-  </div>
-  <div class="mySlides w3-animate-opacity">
-    <img class="w3-image" src="/assets/nick_audit.png" alt="Image 3" style="min-width:500px" width="1500" height="1000">
-    <div class="w3-display-left w3-padding w3-hide-small" style="width:35%">
-      <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-large w3-round-large">
-        <h1 class="w3-xlarge">Nick Name Changes</h1>
-        <hr class="w3-opacity">
-        <p>Make sure your user's nick names are appropriate all the time with Audit Log - Nick Name Changes.</p>
-        <p><button class="w3-button w3-block w3-indigo w3-round">Download <i class="fa fa-android"></i> <i class="fa fa-apple"></i> <i class="fa fa-windows"></i></button></p>
-      </div>
-    </div>
-  </div>
-  <a class="w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-light-grey" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
-  <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)">Take Tour <i class="fa fa-angle-right"></i></a>
-</header>
-
-<!-- The App Section -->
-<div class="w3-padding-64 w3-white">
-  <div class="w3-row-padding">
-    <div class="w3-col l8 m6">
-      <h1 class="w3-jumbo"><b>Warden</b></h1>
-      <h1 class="w3-xxxlarge w3-text-green"><b>Why add it?</b></h1>
-      <p><span class="w3-xlarge">Staff like a pro.</span> With Warden basic, you can get all the info you need in one audit log channel. Get info on deleted messages, like who deleted, what was delted, and who was the author. Timeout easy with w!timeout/w!to. Get easy support in the <a href="https://discord.gg/CfsC5rSBKv">Dragon Studio Discord.</a> </p>
-        <a href="">
-      <button class="w3-button w3-light-grey w3-padding-large w3-section w3-hide-small">
-        <i class="fa fa-download"></i> Get Warden Now!
-      </button>
-    </a>
-    </div>
-    <div class="w3-col l4 m6">
-      <img src="/assets/warden.png" class="w3-image w3-right w3-hide-small" width="335" height="471">
-      <div class="w3-center w3-hide-large w3-hide-medium">
-        <button class="w3-button w3-block w3-padding-large" onclick="document.getElementById('download').style.display='block'">
-          <i class="fa fa-download"></i> Download Application
-        </button>
-        <img src="/w3images/img_app.jpg" class="w3-image w3-margin-top" width="335" height="471">
-      </div>
-    </div>
-  </div>
+    .dr1-discord-logo {
+      width: 50px; /* Adjust the width and height to match your image size */
+      height: 50px;
+      background-image: url('https://img.icons8.com/?size=256&id=99290&format=png'); /* Replace with the actual file name */
+      background-size: cover;
+      display: inline-block; /* To ensure the container only takes up the image size */
+    }
+    </style>
+  </head>
+<body class="w3-black">
+    <script>
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        </script>
+<div class="w3-center">
+<h1>Warden | Permision Doc</h1>
+<p>This document will show the following roles for each Warden Role, ex: [*], [**], etc.</p>
 </div>
-
-<!-- Modal -->
-<div id="download" class="w3-modal w3-animate-opacity">
-  <div class="w3-modal-content" style="padding:32px">
-    <div class="w3-container w3-white">
-      <i onclick="document.getElementById('download').style.display='none'" class="fa fa-remove w3-xlarge w3-button w3-transparent w3-right w3-xlarge"></i>
-      <h2 class="w3-wide">DOWNLOAD</h2>
-      <p>Download the app in AppStore, Google Play or Microsoft Store.</p>
-      <i class="fa fa-android w3-large"></i> <i class="fa fa-apple w3-large"></i> <i class="fa fa-windows w3-large"></i>
-      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
-      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('download').style.display='none'">Fake Download</button>
-    </div>
-  </div>
-</div>
-
-<!-- Clarity Section -->
-<div class="w3-padding-64 w3-light-grey">
-  <div class="w3-row-padding">
-    <div class="w3-col l4 m6">
-      <img class="w3-image w3-round-large w3-hide-small w3-grayscale" src="/w3images/app5.jpg" alt="App" width="335" height="471">
-    </div>
-    <div class="w3-col l8 m6">
-      <h1 class="w3-jumbo"><b>Warden</b></h1>
-      <h1 class="w3-xxxlarge w3-text-red"><b>PRO</b></h1>
-      <p><span class="w3-xlarge"></span> Sharp and clear photos with the world's best photo engine, incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    </div>
-  </div>
-</div>
-
-<!-- Features Section -->
-<div class="w3-container w3-padding-64 w3-dark-grey w3-center">
-  <h1 class="w3-jumbo"><b>Features</b></h1>
-  <p>* - Varies on position in the globe.</p>
-
-  <div class="w3-row" style="margin-top:64px">
-    <div class="w3-col s3">
-      <i class="fa fa-bolt w3-text-orange w3-jumbo"></i>
-      <p>Fast</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-heart w3-text-red w3-jumbo"></i>
-      <p>Loved</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-camera w3-text-yellow w3-jumbo"></i>
-      <p>Low ping*</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-battery-full w3-text-green w3-jumbo"></i>
-      <p>99.80% Uptime</p>
-    </div>
-  </div>
-
-  <div class="w3-row" style="margin-top:64px">
-    <div class="w3-col s3">
-      <i class="fa fa-diamond w3-text-white w3-jumbo"></i>
-      <p>Stunning</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-cloud w3-text-blue w3-jumbo"></i>
-      <p>Requestable Data</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-globe w3-text-amber w3-jumbo"></i>
-      <p>Hosted in the USA</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-hdd-o w3-text-cyan w3-jumbo"></i>
-      <p>Storage is never a issue.</p>
-    </div>
-  </div>
-  
-  <div class="w3-row" style="margin-top:64px">
-    <div class="w3-col s3">
-      <i class="fa fa-user w3-text-sand w3-jumbo"></i>
-      <p>Safe</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-shield w3-text-orange w3-jumbo"></i>
-      <p>Stabile</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-wifi w3-text-grey w3-jumbo"></i>
-      <p>Connected</p>
-    </div>
-    <div class="w3-col s3">
-      <i class="fa fa-image w3-text-pink w3-jumbo"></i>
-      <p>HD</p>
-    </div>
-  </div>
-</div>
-
-<!-- Pricing Section -->
-<div class="w3-padding-64 w3-center w3-white">
-  <h1 class="w3-jumbo"><b>Pricing</b></h1>
-  <p class="w3-large">Choose a pricing plan that fits your needs.</p>
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-half w3-section">
-      <ul class="w3-ul w3-card w3-hover-shadow">
-        <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-        <li class="w3-padding-16"><b>Default</b> Commands</li>
-        <li class="w3-padding-16"><b>Normal</b> Features</li>
-        <li class="w3-padding-16"><b>Default</b> Discord Server</li>
-        <li class="w3-padding-16"><b>Office hours</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-opacity">Free</h2>
+<div>
+    <button onclick="myFunction('[*]')" class="w3-button w3-block w3-center">Role: [*]</button>
+    
+    <div id="[*]" class="w3-container w3-hide">
+        <p>This is the lowest permision you can give a user for Warden.</p>
+        <li>
+            Timeout
         </li>
-        <li class="w3-light-grey w3-padding-24">
-          <a href="https://discord.com/channels/1117082104459690006/1117088879003045988"><button class="w3-button w3-black w3-padding-large"><i class="fa fa-download"></i> Add Warden</button></a>
+        <li>
+            Warn
         </li>
-      </ul>
-    </div>
-    <div class="w3-half w3-section">
-      <ul class="w3-ul w3-card w3-hover-shadow">
-        <li class="w3-red w3-xlarge w3-padding-32">PRO</li>
-        <li class="w3-padding-16"><b>25</b> Custom commands</li>
-        <li class="w3-padding-16"><b>Early</b> Access to Features</li>
-        <li class="w3-padding-16">Access to the <b>DEV</b> Discord Server</li>
-        <li class="w3-padding-16"><b>Endless</b> Support</li>
-        <li class="w3-padding-16">
-          <h2 class="w3-opacity">$ 10 (OTP)</h2>
+        <li>
+            History
         </li>
-        <li class="w3-light-grey w3-padding-24">
-          <a href="https://discord.com/channels/1117082104459690006/1117088879003045988"><button class="w3-button w3-black w3-padding-large"> <i class="fa fa-download"></i> Be a PRO</button></a>
+        <p>Use "w!help (command)" to get help on how to use a command.</p>
+        </div>
+    <button onclick="myFunction('[**]')" class="w3-button w3-block w3-center">Role: [**]</button>
+    
+    <div id="[**]" class="w3-container w3-hide">
+        <p>This is a permision you can give to your Sr. Moderator's.</p>
+        <li>
+            Clear
         </li>
-      </ul>
-    </div>
-  </div>
-  <br>
+        <li>
+            Ban
+        </li>
+        <li>
+            Kick
+        </li>
+        </div>
+    <button onclick="myFunction('[***]')" class="w3-button w3-block w3-center">Role: [***]</button>
+    
+    <div id="[***]" class="w3-container w3-hide">
+        <p>This is a permision you can give to your Administrator's</p>
+        <li>
+            Remove Warning
+        </li>
+        <li>
+            Unban
+        </li>
+        <li>
+           Untimeout
+        </li>
+        </div>
+
+    <button onclick="myFunction('[SENIOR STAFF]')" class="w3-button w3-block w3-center">Role: [SENIOR STAFF]</button>
+        
+    <div id="[SENIOR STAFF]" class="w3-container w3-hide">
+        <p>This is the highest permision you can give a user for Warden. <strong>Be carful giving this permision to anyone.</strong></p>
+        <li>
+          Copy (Message GUI Button)
+        </li>
+        <li>
+          Lock, Unlock
+        </li>
+        </div>    
 </div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-light-grey w3-center w3-xlarge">
-  <div class="w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
-
-<script>
-// Slideshow
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
-
 </body>
-</html>
+</html>d
