@@ -74,24 +74,24 @@
       <div class="w3-container w3-responsive">
         <table class="w3-table">
           <tr>
-            <td><a>SimplePixel</a></td>
+            <th>Server</th>
             <th>Position</th>
             <th>Now/Past</th>
           </tr>
           <tr class="w3-white">
-              <td><a>SimplePixel</a></td>
+            <td><a href="https://discord.gg/SXY2JnHZVj">SimplePixel</a></td>
             <td>Discord Python Developer (Interactions.py)</td>
             <td>Active</td>
           </tr>
           <tr>
-            <td><a>SimplePixel</a></td>
+            <td><a href="https://discord.gg/7DrdUCkv9P">SimplePixel</a></td>
             <td>Plugin Configuration + Plugin Development + Network Configuration</td>
             <td>Active</td>
           </tr>
           <tr class="w3-white">
-            <td><a>SimplePixel</a></td>
+            <td><a>SourPVP</a></td>
             <td>London, UK</td>
-            <td>Lorem ipsum</td>
+            <td>Past</td>
           </tr>
           <tr>
             <td><a>SimplePixel</a></td>
@@ -135,8 +135,7 @@
             <strong>Sunday</strong> | 11:00am - ~2:00pm. (Varies)
         </li>
     </ul>
-
-    <p>What time is it for me right now?</p>
+    <p><em>"What time is it for me right now?</em></p>
     <div id="cdt-time"></div>
 
 
@@ -153,11 +152,7 @@
           const cdtTime = currentTime.toLocaleString('en-US', options);
           document.getElementById('cdt-time').textContent = cdtTime;
       }
-
-      // Update the time every second
       setInterval(updateCDTTime, 1000);
-
-      // Initial update
       updateCDTTime();
   </script>
 
@@ -184,13 +179,39 @@
                 <p>Skills</p>
             </button>
         </a>
+        <button onclick="myFunction('Demo1')" class="w3-button">
+        Pricing</button>
+
+        <div id="Demo1" class="w3-container w3-hide">
+        <li>
+            <p class="w3-tooltip">Positions <span class="w3-tag w-blue">$6/Month<span class="w3-text">(<em>At least.</em>)</span></span>
+        </li>
+        <li>
+            <p class="w3-tooltip">Plugin Development Commission <span class="w3-tag w-blue">$10-20<span class="w3-text">(<em>At least.</em>)</span></span>
+        </li>
+        <li>
+            <p class="w3-tooltip">Plugin Config/Server Setup Commission <span class="w3-tag w-blue">$0-20<span class="w3-text">(<em>At least.</em>)</span></span>
+        </li>
+
+        </div>
+
+        <script>
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+</script>
     </div>
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-container w3-black w3-padding-16">
-  <p></p>
+  <a href="/media.html"><p>Contact mainly on Discord. Email is rarely check compared to Discord.</p></a>
 </footer>
 
 </body>
