@@ -20,7 +20,7 @@
         width: 20px;
         height: 100%;
         background: linear-gradient(to bottom, #f00 0%, #00f 100%);
-        animation: glitch-anim 2s infinite linear alternate-reverse;
+        animation: glitch-anim 0.5s infinite linear alternate-reverse;
         z-index: 1;
     }
 
@@ -36,18 +36,18 @@
 
     @keyframes glitch-anim {
         0% {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
         100% {
-            transform: translateY(5px);
+            transform: translateY(2px);
         }
     }
 </style>
 </head>
 <body>
-<div class="content">
+    <div class="content">
         <h1>Welcome to My Glitchy Website!</h1>
         <p>This is some content on my glitchy website. Feel free to add more elements like images, paragraphs, lists, etc.</p>
-</div>
+    </div>
 </body>
 </html>
