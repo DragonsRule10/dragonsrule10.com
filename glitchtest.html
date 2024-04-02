@@ -1,53 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glitch Effect on Borders</title>
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        position: relative;
-    }
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Glitch Effect - Easy Tutorials</title>
+        <style>
+            *{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
 
-    body:before,
-    body:after {
-        content: '';
-        position: absolute;
+body{
+    background: #222;
+    color: #fff;
+}
+
+.glitch{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+
+.glitch::before, .glitch::after{
+    content: 'GLITCH';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.glitch:hover::before{
+    animation: glitch 0.3s linear 6;
+    color: #e91e63;
+    z-index: -2;
+}
+
+.glitch:hover::after{
+    animation: glitch 0.3s linear 6 reverse;
+    color: #2196f3;
+    z-index: -1;
+}
+
+@keyframes glitch{
+    0%{
         top: 0;
-        width: 20px;
-        height: 100%;
-        background: linear-gradient(to bottom, #f00 0%, #00f 100%);
-        animation: glitch-anim 0.5s infinite linear alternate-reverse;
-        z-index: 1;
+        left: 0;
     }
 
-    body:before {
-        left: -20px;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    20%{
+        top: -5px;
+        left: -5px;
     }
 
-    body:after {
-        right: -20px;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    40%{
+        top: 5px;
+        left: 5px;
     }
 
-    @keyframes glitch-anim {
-        0% {
-            transform: translateY(-2px);
-        }
-        100% {
-            transform: translateY(2px);
-        }
+    60%{
+        top: -5px;
+        left: 5px;
     }
-</style>
-</head>
-<body>
-    <div class="content">
-        <h1>Welcome to My Glitchy Website!</h1>
-        <p>This is some content on my glitchy website. Feel free to add more elements like images, paragraphs, lists, etc.</p>
-    </div>
-</body>
+
+    80%{
+        top: 5px;
+        left: -5px;
+    }
+
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <h1 class="glitch">GLITCH</h1>
+    </body>
 </html>
