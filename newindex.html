@@ -3,16 +3,26 @@
     <head>
         <link rel="stylesheet" href="/style.css">
 		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-		<title>Home - Legacy Edition Minigames</title>
-
+		<title>DragonsRule10</title>
 		<link rel="preload" as="image" href="/assets/btn-minecraft-hover.png">
 		<link rel="preload" as="image" href="/assets/btn-panorama-hover.png">
-		<meta content="Home" property="og:title">
-    	<meta content="legacyminigames.net" property="og:site_name">
-    	<meta content="/assets/post-image-placeholder.png" property="og:image">
-		<link type="application/json+oembed" href="/assets/oembed.json">
+		<link href="/assets/CommissionThingyDone.png" rel="shortcut icon" type="image/x-icon">
+		<meta property="og:title" content="DragonsRule10 | Developer">
+		<meta property="og:description" content="'Hey there, I'm Tristin, also known as Dragon (DragonsRule10) online, and I've been diving into the coding world since 2021. Coding has always been a significant part of my life, and I've had some cool experiences along the way.'">
+		<meta property="og:image" content="/CommissionThingyDone.png">
+		<meta property="og:url" content="https://dragonsrule10.com/index">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     </head>
     <body>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2EXD01SNMS"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-2EXD01SNMS');
+	</script>
 		<link rel="stylesheet" class="theme">
 		<div class="panorama-button pixelated" title="Toggle panorama movement" onclick="triggerPanoramaMovement();"></div>
 			<div class="backdrop-blur"></div>
@@ -40,12 +50,25 @@
 			<div class="container">
 				<a href="/"><span class="logo"></span></a>
     		    <div class="guibox center">
-	Achievements are broken at the moment and will randomly delete themselves from your savedata. A solution will be made in the 1.20.5 version of LEM.
+
 </div>
 
 <div class="guibox center">
 	<div class="button-list">
-		<a class="minecraft-button center" href="/about">About</a>
+		<a class="minecraft-button center" onclick="myFunction('Demo1')">About</a>
+		<div id="Demo1" class="w3-container w3-hide">
+            <p>I am a Dragon lol this is fake for now blah blah blah</p>
+        </div>
+		<script>
+        function myFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+		</script>
 		<a class="minecraft-button center" href="/join">How to join</a>
 		<a class="minecraft-button center" href="/rules">Server Rules</a>
 		<a class="minecraft-button center" href="/blog">Blog</a>
