@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>DragonsRule10</title>
-    <meta charset="UTF-8">
-    <link href="https://cdn.discordapp.com/attachments/1138143016679383162/1150387319136854077/Dragon_10new.png" rel="shortcut icon" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-    body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-    .w3-row-padding img {margin-bottom: 12px}
-    /* Set the width of the sidebar to 120px */
-    .w3-sidebar {width: 120px;background: #222;}
-    /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-    #main {margin-left: 120px}
-    /* Remove margins from "page content" on small screens */
-    @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    <head>
+        <link rel="stylesheet" href="/style.css">
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+		<title>DragonsRule10</title>
 
-    .dr1-discord-logo {
-      width: 50px; /* Adjust the width and height to match your image size */
-      height: 50px;
-      background-image: url('https://img.icons8.com/?size=256&id=99290&format=png'); /* Replace with the actual file name */
-      background-size: cover;
-      display: inline-block; /* To ensure the container only takes up the image size */
-    }
-    </style>
-  </head>
-<body class="w3-black">
-<div class="w3-center">
-<h1>Hmm... I don't know that...</h1>
-<p1>404: Not found, try another URL or check or typos.</p1>
+		<link rel="preload" as="image" href="/assets/btn-minecraft-hover.png">
+		<link rel="preload" as="image" href="/assets/btn-panorama-hover.png">
+		<link href="/assets/CommissionThingyDone.png" rel="shortcut icon" type="image/x-icon">
+		<meta property="og:title" content="DragonsRule10 | Developer">
+		<meta property="og:description" content="'Hey there, I'm Tristin, also known as Dragon (DragonsRule10) online, and I've been diving into the coding world since 2021. Coding has always been a significant part of my life, and I've had some cool experiences along the way.'">
+		<meta property="og:image" content="/CommissionThingyDone.png">
+		<meta property="og:url" content="https://dragonsrule10.com/index">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2EXD01SNMS"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-2EXD01SNMS');
+	</script>
+		<link rel="stylesheet" class="theme">
+		<div class="panorama-button pixelated" title="Toggle panorama movement" onclick="triggerPanoramaMovement();"></div>
+			<div class="backdrop-blur"></div>
+			<audio id="music">
+				<source src="/assets/menu2.ogg" type="audio/ogg">
+			</audio>
+			<audio id="musicHalloween">
+				<source src="/assets/halloween.ogg" type="audio/ogg">
+			</audio>
+			<audio id="musicFestive">
+				<source src="/assets/flake.ogg" type="audio/ogg">
+      </audio>
+			<audio id="musicAprilFools">
+				<source src="/assets/aprilfools.ogg" type="audio/ogg">
+			</audio>
+			<audio id="click">
+				<source src="/assets/audio/click.ogg" type="audio/ogg">
+			</audio>
+			<audio id="hover">
+				<source src="/assets/hover.ogg" type="audio/ogg">
+			</audio>
+			<audio id="clickAprilFools">
+				<source src="/assets/aprilfools/click.ogg" type="audio/ogg">
+			</audio>
+
+<div class="container">
+<div class="guibox center">
+    <p>404 - NOT FOUND - Check for a typo, or try again later. :(</p>
+	<a class="minecraft-button center" href="/index.html">Home</a>
 </div>
-</body>
+<div class="guibox center" style="font-size: 0.90em;">
+	Website resources belong to <a href="https://www.legacyminigames.net/">LEM</a>.<br>
+	NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+	</div>
+	</div>
+    </body>
+    <script src="/script.js"></script>
 </html>
