@@ -1,224 +1,74 @@
+<!DOCTYPE html>
 <html>
-<head>
-<title>DragonsRule10</title>
-<meta charset="UTF-8">
-<link href="/assets/CommissionThingyDone.png" rel="shortcut icon" type="image/x-icon">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="DragonsRule10 | Developer">
-<meta property="og:description" content="'Hey there, I'm Tristin, also known as Dragon (DragonsRule10) online, and I've been diving into the coding world since 2021. Coding has always been a significant part of my life, and I've had some cool experiences along the way.'">
-<meta property="og:image" content="/CommissionThingyDone.png">
-<meta property="og:url" content="https://dragonsrule10.com/index">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-</head>
-<body class="w3-content w3-black" style="max-width:1300px">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2EXD01SNMS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <head>
+        <link rel="stylesheet" href="/style.css">
+		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+		<title>DragonsRule10</title>
+		<link rel="preload" as="image" href="/assets/btn-minecraft-hover.png">
+		<link rel="preload" as="image" href="/assets/btn-panorama-hover.png">
+		<link href="/assets/CommissionThingyDone.png" rel="shortcut icon" type="image/x-icon">
+		<meta property="og:title" content="DragonsRule10 | Developer">
+		<meta property="og:description" content="'Hey there, I'm Tristin, also known as Dragon (DragonsRule10) online, and I've been diving into the coding world since 2021. Coding has always been a significant part of my life, and I've had some cool experiences along the way.'">
+		<meta property="og:image" content="/CommissionThingyDone.png">
+		<meta property="og:url" content="https://dragonsrule10.com/index">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    </head>
+    <body>
 
-  gtag('config', 'G-2EXD01SNMS');
-</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-2EXD01SNMS"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-<div class="w3-row">
-  <div class="w3-half w3-black w3-container w3-center" style="height:700px">
-    <div class="w3-padding-64">
-      <h1>Dragon / Tristin</h1>
-    </div>
-    <div class="w3-padding-64">
-      <a href="#" class="w3-button w3-black w3-block w3-hover-blue-grey w3-padding-16">Home</a>
-      <a href="#work" class="w3-button w3-black w3-block w3-hover-teal w3-padding-16">My Work</a>
-      <a href="#contact" class="w3-button w3-black w3-block w3-hover-brown w3-padding-16">Contact</a>
-    </div>
-  </div>
-  <div class="w3-half w3-blue-grey w3-container" style="height:700px">
-    <div class="w3-padding-64 w3-center">
-      <h1>About Me</h1>
-      <img src="/assets/CommissionThingyDone.png" class="w3-margin w3-round" alt="Made by @reddivalentine on Discord!" style="width:50%">
-      <div class="w3-left-align w3-padding-large">
-        <p>Hey there, I'm Tristin, also known as Dragon (DragonsRule10) online, and I've been diving into the coding world since 2021. Coding has always been a significant part of my life, and I've had some cool experiences along the way.</p>
-        <p>Being at a young age and already immersed in the coding world feels pretty surreal, but I'm loving every moment of it. There's always something new to learn, and I'm excited to see where my coding journey takes me next.</p>
-      </div>
-    </div>
-  </div>
+	  gtag('config', 'G-2EXD01SNMS');
+	</script>
+		<link rel="stylesheet" class="theme">
+		<div class="panorama-button pixelated" title="Toggle panorama movement" onclick="triggerPanoramaMovement();"></div>
+			<div class="backdrop-blur"></div>
+			<audio id="music">
+				<source src="/assets/menu2.ogg" type="audio/ogg">
+			</audio>
+			<audio id="musicHalloween">
+				<source src="/assets/halloween.ogg" type="audio/ogg">
+			</audio>
+			<audio id="musicFestive">
+				<source src="/assets/flake.ogg" type="audio/ogg">
+      </audio>
+			<audio id="musicAprilFools">
+				<source src="/assets/aprilfools.ogg" type="audio/ogg">
+			</audio>
+			<audio id="click">
+				<source src="/assets/audio/click.ogg" type="audio/ogg">
+			</audio>
+			<audio id="hover">
+				<source src="/assets/hover.ogg" type="audio/ogg">
+			</audio>
+			<audio id="clickAprilFools">
+				<source src="/assets/aprilfools/click.ogg" type="audio/ogg">
+			</audio>
+			<div class="container">
+				<a href="/"><span class="logo"></span></a>
+    		    <div class="guibox center">
+			<img src="/assets/CommissionThingyDone.png" class="w3-round center" alt="Made by @reddivalentine on Discord!" style="width:50%">
+			</div>
+<div class="guibox center">
+	<div class="button-list">
+		<a class="minecraft-button center" href="/about.html">About Me</a>
+		<em><a class="minecraft-button center" href="https://ds.dragonsrule10.com">Dragon Studio</a></em>
+		<a class="minecraft-button center" href="/past.html">My Current/Past Positions</a>
+		<a class="minecraft-button center" href="/time.html">Office Hours</a>
+		<a class="minecraft-button center" href="/skills.html">Skills</a>
+		<a class="minecraft-button center" href="/media.html">Media</a>
+	</div>
 </div>
 
-
-<div class="w3-row">
-  <div class="w3-half w3-light-grey w3-center" style="min-height:800px" id="work">
-    <div class="w3-padding-64">
-      <h2>Testimonials</h2>
-      <p>Testimonials from my customers;</p>
-    </div>
-    <div class="w3-row">
-      <div class="w3-center">
-          <p><em>"Dragon, is in my opinion the best, most active, and most friendly Developer i‘ve seen, if I need help or anything, he’s here to help and if I don‘t know something or understand something, he explains it to me in detail, for a self taught Developer this is REALLY impressive. Completely 10/10"</em> <a href="https://discord.com/users/1014697305246531615">-Yogi, Owner of YogiSMP.</a></p>
-      </div>
-
-    </div>
-    <div class="w3-row w3-hide-small">
-      <div class="w3-center">
-          <p><em>"i'm glad that you did everything fast, it was pretty bad that i needed to wait like 6h to make it, but its not rlly your fault i'm on a continent and you are on another continent and the time is not synchronized. Except that everything its fine, good work, fast. I'd give a 9.5/10"</em> <a href="https://discord.com/users/918775769688322098">-andrei.102, Owner of Wallahia, Commission; Network Configuration, Plugin Configuration</a></p>
-      </div>
-
-    </div><br>
-    <p>Add a review of my work by messaging me on <em><a href="https://discord.com/users/956007823261700107">Discord</a>.</em></p>
-  </div>
-  <div class="w3-half w3-indigo w3-container" style="min-height:800px">
-    <div class="w3-padding-64 w3-center">
-      <h2>Positions</h2>
-      <p>People/teams I've worked for.</p>
-      <div class="w3-container w3-responsive">
-        <table class="w3-table">
-          <tr>
-            <th>Server</th>
-            <th>Position</th>
-            <th>Now/Past</th>
-          </tr>
-          <tr class="w3-white">
-            <td><a href="https://discord.gg/serverhost">GustyHost</a></td>
-            <td>System Manager and Administrator</td>
-            <td>Active</td>
-          </tr>
-          <tr class="w3-white">
-            <td><a href="https://discord.gg/">SpaceParticles</a></td>
-            <td>Plugin Configuration + Plugin Development + Network Configuration</td>
-            <td>Active</td>
-          </tr>
-          <tr class="w3-white">
-            <td><a href="https://expanse.host">Expanse.host</a></td>
-            <td>Customer Support</td>
-            <td>Active</td>
-          </tr>
-          <tr class="w3-white">
-            <td><a href="https://discord.gg/sourmc">SourMC (SourPVP)</a></td>
-            <td>Plugin Configuration + Network Configuration + Discord Python Development</td>
-            <td>Past</td>
-          </tr>
-          <tr class="w3-white">
-            <td><a href="https://discord.gg/yogismp">YogiSMP</a></td>
-            <td>Head Developers + Plugin Configuration + Plugin Developement + Web Development + Network Configuration + Domain Configuration</td>
-            <td>Past</td>
-          </tr>
-          <tr class="w3-white">
-            <td><a href="https://discord.gg/respawnmc">Respawn (Sandbox LLC)</a></td>
-            <td>Moderator</td>
-            <td>Past</td>
-          </tr>
-          <tr class="w3-hide-medium w3-white">
-            <td><a href="https://societyunites.github.io">Society Unites</a></td>
-            <td>Plugin Developer + Configuration + Web Development + SR. Moderator</td>
-            <td>Past</td>
-          </tr>
-        </table>
-      </div>
-      <a href="/resume.html">
-      <div class="w3-button">Resume</div>
-      </a>
-    </div>
-  </div>
-</div>
-
-
-<div class="w3-row" id="contact">
-  <div class="w3-half w3-dark-grey w3-container w3-center" style="height:700px">
-    <div class="w3-padding-64">
-      <h1>Office Hours</h1>
-    </div>
-    <div class="w3-padding-64">
-      <ul>
-        <li>
-            <strong>Monday, Tuesday, Thursday, Friday</strong> | 3:15pm - 8:15pm
-        </li>
-        <li>
-           <strong>Wednesdays</strong> | Available mostly all day.
-        </li>
-        <li>
-            <strong>Saturday</strong> | Available mostly all day.
-        </li>
-        <li>
-            <strong>Sunday</strong> | 11:00am - ~2:00pm. (Varies)
-        </li>
-    </ul>
-    <p><em>"What time is it for me right now?</em></p>
-    <div id="cdt-time"></div>
-
-
-    <script>
-      function updateCDTTime() {
-          const currentTime = new Date();
-          const options = {
-              timeZone: 'America/Chicago',
-              hour: 'numeric',
-              minute: 'numeric',
-              second: 'numeric',
-              hour12: true,
-          };
-          const cdtTime = currentTime.toLocaleString('en-US', options);
-          document.getElementById('cdt-time').textContent = cdtTime;
-      }
-      setInterval(updateCDTTime, 1000);
-      updateCDTTime();
-  </script>
-
-
-    </p>
-    </div>
-  </div>
-  <div class="w3-half w3-teal w3-container" style="height:700px">
-    <div class="w3-padding-64 w3-padding-large">
-      <p>Extra pages:</p>
-        <a href="/media.html">
-            <button class="w3-button">
-                <p>Media/Contact</p>
-            </button>
-        </a>
-        <a href="/dragonstudio.html">
-            <button class="w3-button">
-                <p>Dragon Studio</p>
-            </button>
-        </a>
-
-        <a href="/skills.html">
-            <button class="w3-button">
-                <p>Skills</p>
-            </button>
-        </a>
-        <button onclick="myFunction('Demo1')" class="w3-button">
-        Pricing [$ USD]</button>
-
-        <div id="Demo1" class="w3-container w3-hide">
-        <div>
-            <p class="w3-tooltip">Positions <span class="w3-tag w-blue">$6/Month</span><span class="w3-text"> (<em>At least.</em>)</span></span></p>
-        </div>
-        <div>
-            <p class="w3-tooltip">Plugin Development Commission <span class="w3-tag w-blue">$10-20</span><span class="w3-text"> (<em>At least.</em>)</span></span></p>
-        </div>
-        <div>
-            <p class="w3-tooltip">Plugin Config/Server Setup/Panel Setup Commission <span class="w3-tag w-blue">$0-20</span><span class="w3-text"> (<em>At least.</em>)</span></span></p>
-        </div>
-
-        </div>
-
-        <script>
-        function myFunction(id) {
-          var x = document.getElementById(id);
-          if (x.className.indexOf("w3-show") == -1) {
-            x.className += " w3-show";
-          } else {
-            x.className = x.className.replace(" w3-show", "");
-          }
-        }
-</script>
-    </div>
-  </div>
-</div>
-
-
-<footer class="w3-container w3-padding-16">
-  <a href="/media.html"><p>Contact mainly on Discord. Email is rarely check compared to Discord.</p></a>
-</footer>
-
-</body>
+				<div class="guibox center" style="font-size: 0.90em;">
+					Website resources belong to <a href="https://www.legacyminigames.net/">LEM</a><br>
+					NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+				</div>
+			</div>
+    </body>
+    <script src="/script.js"></script>
 </html>
