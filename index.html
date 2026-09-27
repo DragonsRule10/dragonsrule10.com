@@ -1,72 +1,591 @@
+```html
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="/style.css">
-		<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-		<title>DragonsRule10</title>
-		<link rel="preload" as="image" href="/assets/btn-minecraft-hover.png">
-		<link rel="preload" as="image" href="/assets/btn-panorama-hover.png">
-		<link rel="preload" as="audio" href="/assets/audio/click.ogg">
-		<link rel="preload" as="audio" href="/assets/audio/hover.ogg">
-		<link href="/assets/CommissionThingyDone.png" rel="shortcut icon" type="image/x-icon">
-		<meta property="og:title" content="DragonsRule10 | Developer">
-		<meta property="og:description" content="'Hey there, I'm Tristin, also known as Dragon (DragonsRule10) online, and I've been diving into the coding world since 2021. Coding has always been a significant part of my life, and I've had some cool experiences along the way.'">
-		<meta property="og:image" content="/CommissionThingyDone.png">
-		<meta property="og:url" content="https://dragonsrule10.com/index">
-<meta name="google-adsense-account" content="ca-pub-1091563147222299">
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	
-		<link rel="stylesheet" class="theme">
-		<div class="panorama-button pixelated" title="Toggle panorama movement" onclick="triggerPanoramaMovement();"></div>
-			<div class="backdrop-blur"></div>
-			<audio id="music">
-				<source src="/assets/menu2.ogg" type="audio/ogg">
-			</audio>
-			<audio id="musicHalloween">
-				<source src="/assets/halloween.ogg" type="audio/ogg">
-			</audio>
-			<audio id="musicFestive">
-				<source src="/assets/flake.ogg" type="audio/ogg">
-      </audio>
-			<audio id="musicAprilFools">
-				<source src="/assets/aprilfools.ogg" type="audio/ogg">
-			</audio>
-			<audio id="click">
-				<source src="/assets/audio/click.ogg" type="audio/ogg">
-			</audio>
-			<audio id="hover">
-				<source src="/assets/audio/hover.ogg" type="audio/ogg">
-			</audio>
-			<audio id="clickAprilFools">
-				<source src="/assets/aprilfools/click.ogg" type="audio/ogg">
-			</audio>
-			<div class="container">
-				<a href="/"><span class="logo"></span></a>
-    		    <div class="guibox center">
-			<img src="/assets/CommissionThingyDone.png" class="w3-round center" alt="Made by @reddivalentine on Discord!" style="width:50%">
-			</div>
-<div class="guibox center">
-	<p>Please note, I no longer provide any Minecraft services. VPS/Bare metal panel setup is excluded.</p>
-	<div class="button-list">
-		
-		<a onclick="clickSound(); setTimeout(function timeout() { window.location = '/about'; }, 100);" onmouseover="hoverSound()" class="minecraft-button center" href="https://me.tristins.network">Portfolio Site</a>
-		<a onclick="clickSound(); setTimeout(function timeout() { window.location = '/about'; }, 100);" onmouseover="hoverSound()" class="minecraft-button center" href="/time.html">Office Hours</a>
-		<a onclick="clickSound(); setTimeout(function timeout() { window.location = '/about'; }, 100);" onmouseover="hoverSound()" class="minecraft-button center" href="/skills.html">Skills</a>
-		<a onclick="clickSound(); setTimeout(function timeout() { window.location = '/about'; }, 100);" onmouseover="hoverSound()" class="minecraft-button center" href="https://discord.com/users/956007823261700107">My Discord</a>
-		<a onclick="clickSound(); setTimeout(function timeout() { window.location = '/about'; }, 100);" onmouseover="hoverSound()" class="minecraft-button center" href="https://github.com/dragonsrule10">My GitHub</a>
-	</div>
-	</div>
-</div>
+    <title>Tristin Korbel | IT & Technology</title>
 
-				<div class="guibox center" style="font-size: 0.90em;">
-					No, I am not a furry. I just like dragons a lot. <br>
-					Website resources belong to <a href="https://www.legacyminigames.net/">LEM</a><br>
-					NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
-				</div>
-			</div>
-    </body>
-    <script src="/script.js"></script>
+    <meta
+        name="description"
+        content="Portfolio of Tristin Korbel — IT, networking, cybersecurity, homelab, and technology projects."
+    >
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+        :root {
+            --background: #0b0d10;
+            --surface: #12161c;
+            --surface-hover: #181e26;
+            --border: #252c36;
+            --text: #f1f5f9;
+            --muted: #9ca3af;
+            --accent: #60a5fa;
+            --accent-hover: #93c5fd;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+        }
+
+        /* Navigation */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(11, 13, 16, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: calc(100vh - 70px);
+            display: flex;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 5.5rem);
+            line-height: 1.05;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 1.2rem;
+            max-width: 650px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            background: var(--surface-hover);
+            border-color: var(--accent);
+        }
+
+        .button.primary {
+            background: var(--accent);
+            color: #07111f;
+            border-color: var(--accent);
+            font-weight: 600;
+        }
+
+        .button.primary:hover {
+            background: var(--accent-hover);
+        }
+
+        /* Sections */
+
+        section {
+            padding: 90px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+        }
+
+        /* About */
+
+        .about {
+            max-width: 800px;
+        }
+
+        .about p {
+            color: var(--muted);
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+
+        /* Skills */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+        }
+
+        .skill h3 {
+            margin-bottom: 8px;
+        }
+
+        .skill p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* Projects */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project {
+            padding: 25px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: var(--muted);
+            margin-bottom: 15px;
+        }
+
+        .project a {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 650px) {
+            .nav-links {
+                gap: 14px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">Dragons<span>Rule10</span></a>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<main>
+
+    <!-- Hero -->
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+
+                <div class="eyebrow">
+                    IT • Networking • Technology
+                </div>
+
+                <h1>
+                    Hi, I'm <span>Tristin.</span>
+                </h1>
+
+                <p>
+                    I'm an aspiring IT and cybersecurity professional who enjoys
+                    working with computers, networks, servers, and homelab projects.
+                    This website is a collection of the things I've built and learned.
+                </p>
+
+                <div class="buttons">
+                    <a href="#projects" class="button primary">
+                        View My Projects
+                    </a>
+
+                    <a
+                        href="https://github.com/DragonsRule10"
+                        class="button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>A little bit about what I do.</p>
+            </div>
+
+            <div class="about">
+
+                <p>
+                    I'm interested in information technology, networking,
+                    cybersecurity, system administration, and building useful
+                    technology projects.
+                </p>
+
+                <p>
+                    A lot of my experience comes from hands-on projects,
+                    experimenting with hardware and software, and maintaining
+                    my own servers and network infrastructure.
+                </p>
+
+                <p>
+                    I'm currently working toward a career in IT and cybersecurity
+                    and enjoy learning something new whenever I can.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+
+    <section id="skills">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Skills & Interests</h2>
+                <p>Some of the areas I work with.</p>
+            </div>
+
+            <div class="skills">
+
+                <div class="skill">
+                    <h3>IT Support</h3>
+                    <p>
+                        PC troubleshooting, hardware, operating systems,
+                        software configuration, and technical support.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Networking</h3>
+                    <p>
+                        Network configuration, routing, VLANs, Wi-Fi,
+                        DNS, VPNs, and network troubleshooting.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Servers</h3>
+                    <p>
+                        Linux, virtualization, game servers, web services,
+                        storage, backups, and self-hosted applications.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Cybersecurity</h3>
+                    <p>
+                        Security fundamentals, network security,
+                        access control, monitoring, and secure infrastructure.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Web Development</h3>
+                    <p>
+                        HTML, CSS, JavaScript, Git, GitHub, and
+                        building simple web applications.
+                    </p>
+                </div>
+
+                <div class="skill">
+                    <h3>Homelab</h3>
+                    <p>
+                        Building and maintaining personal infrastructure
+                        for learning, testing, and experimentation.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+
+    <section id="projects">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Projects</h2>
+                <p>Some of the things I've worked on.</p>
+            </div>
+
+            <div class="projects">
+
+                <article class="project">
+                    <h3>Homelab</h3>
+
+                    <p>
+                        A personal server environment used to experiment
+                        with virtualization, networking, storage, monitoring,
+                        and self-hosted services.
+                    </p>
+
+                    <a href="https://github.com/DragonsRule10" target="_blank" rel="noopener noreferrer">
+                        View on GitHub →
+                    </a>
+                </article>
+
+
+                <article class="project">
+                    <h3>Network Infrastructure</h3>
+
+                    <p>
+                        Hands-on networking projects involving routers,
+                        switches, wireless networks, VPNs, DNS, and
+                        network segmentation.
+                    </p>
+
+                    <a href="https://github.com/DragonsRule10" target="_blank" rel="noopener noreferrer">
+                        View Projects →
+                    </a>
+                </article>
+
+
+                <article class="project">
+                    <h3>Game Servers</h3>
+
+                    <p>
+                        Experience hosting and maintaining multiplayer
+                        game servers, including configuration, plugins,
+                        networking, and server administration.
+                    </p>
+
+                    <a href="https://github.com/DragonsRule10" target="_blank" rel="noopener noreferrer">
+                        View Projects →
+                    </a>
+                </article>
+
+
+                <article class="project">
+                    <h3>This Website</h3>
+
+                    <p>
+                        My personal portfolio website, hosted through
+                        GitHub Pages and built with HTML and CSS.
+                    </p>
+
+                    <a href="https://github.com/DragonsRule10/dragonsrule10.com" target="_blank" rel="noopener noreferrer">
+                        Source Code →
+                    </a>
+                </article>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+        <div class="container">
+
+            <div class="contact">
+
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                    <p>Want to find me somewhere else?</p>
+                </div>
+
+                <div class="buttons">
+
+                    <a
+                        href="https://github.com/DragonsRule10"
+                        class="button primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="https://discord.com/users/956007823261700107"
+                        class="button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Discord
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer>
+    <div class="container">
+        © 2026 Tristin Korbel · DragonsRule10
+    </div>
+</footer>
+
+</body>
 </html>
+```
