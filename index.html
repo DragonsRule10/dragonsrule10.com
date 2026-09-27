@@ -276,7 +276,7 @@
             </h1>
 
             <div class="status">
-                ✦ IT • Homelab • Minecraft ✦
+                ✦ IT • Homelab • All things tech ✦
             </div>
 
 
@@ -287,11 +287,37 @@
                 networking, Minecraft, and building random
                 things that probably didn't need to be built.
             </p>
+			<p><em>"What time is it for me right now?"</em></p>
+    		<div id="cdt-time"></div>
+
+
+			<script>
+			function updateCDTTime() {
+				const currentTime = new Date();
+				const options = {
+					timeZone: 'America/Chicago',
+					hour: 'numeric',
+					minute: 'numeric',
+					second: 'numeric',
+					hour12: true,
+				};
+				const cdtTime = currentTime.toLocaleString('en-US', options);
+				document.getElementById('cdt-time').textContent = cdtTime;
+			}
+			setInterval(updateCDTTime, 1000);
+			updateCDTTime();
+			</script>
 
 
             <!-- Main links -->
 
             <div class="links">
+				<a
+                    class="profile-button"
+                    href="https://dragonsrule10.com"
+                >
+                    My Website (You made it!)
+                </a>
 
                 <a
                     class="profile-button"
@@ -302,12 +328,7 @@
                     GitHub
                 </a>
 
-                <a
-                    class="profile-button"
-                    href="https://dragonsrule10.com"
-                >
-                    My Website
-                </a>
+                
 
                 <a
                     class="profile-button"
@@ -318,41 +339,20 @@
                     Discord
                 </a>
 
-                <a
-                    class="profile-button"
-                    href="https://steamcommunity.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Steam
-                </a>
+                
 
             </div>
 
 
             <!-- Social icons -->
 
-            <div class="social-links">
-
-                <a
-                    class="social-button github"
-                    href="https://github.com/DragonsRule10"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                ></a>
-
-                <a
-                    class="social-button youtube"
-                    href="#"
-                    aria-label="YouTube"
-                ></a>
-
-            </div>
+            
 
 
             <div class="footer">
-                dragonsrule10.com
+                t  //  dragon  //  lohi <br>
+				Website resources belong to <a href="https://www.legacyminigames.net/">LEM</a><br>
+				NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
             </div>
 
         </div>
