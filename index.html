@@ -14,9 +14,459 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
 
-    <style>
-        :root { --background-dark: #080808; --background-light: #141414; --panel-dark: #1b1b1b; --panel-light: #242424; --border-dark: #101010; --border-light: #555555; --text: #ffffff; --text-muted: #aaaaaa; --minecraft-green: #55ff55; --minecraft-yellow: #ffff55; --shadow: rgba(0, 0, 0, 0.75); /* Change this to control the maximum avatar size. Examples: 80px 100px 128px 160px 200px */ --avatar-size: 128px; --card-width: 440px; } /* ========================================================= RESET ========================================================= */ * { box-sizing: border-box; margin: 0; padding: 0; } html { scroll-behavior: smooth; } body { min-height: 100vh; color: var(--text); font-family: "Minecraft", "Minecraftia", Arial, Helvetica, sans-serif; background: #000; overflow-x: hidden; } /* ========================================================= MINECRAFT FONT ========================================================= */ @font-face { font-family: "Minecraft"; src: url("assets/Minecraft.ttf") format("truetype"); font-display: swap; } /* ========================================================= PANORAMA BACKGROUND ========================================================= */ body::before { content: ""; position: fixed; inset: -5%; z-index: -3; background-image: url("assets/Panorama.png"); background-position: center; background-size: cover; background-repeat: no-repeat; image-rendering: pixelated; transform: scale(1.05); } /* Dark overlay */ body::after { content: ""; position: fixed; inset: 0; z-index: -2; background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65) ); pointer-events: none; } /* ========================================================= BACKDROP BLUR ========================================================= */ .backdrop-blur { position: fixed; inset: 0; z-index: -1; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); pointer-events: none; } /* ========================================================= MAIN PROFILE CONTAINER ========================================================= */ .profile-wrapper { min-height: 100vh; width: 100%; display: flex; justify-content: center; align-items: center; padding: 40px 20px; } /* ========================================================= PROFILE CARD ========================================================= */ .profile-card { width: var(--card-width); max-width: 100%; padding: 32px 30px; position: relative; text-align: center; background: linear-gradient( 145deg, rgba(35, 35, 35, 0.96), rgba(15, 15, 15, 0.96) ); border: 3px solid #111; box-shadow: 0 0 0 2px #555, 0 12px 35px rgba(0, 0, 0, 0.8); image-rendering: pixelated; } /* Minecraft-style inner border */ .profile-card::before { content: ""; position: absolute; inset: 7px; border: 2px solid #333; pointer-events: none; } /* ========================================================= AVATAR CONTAINER ========================================================= */ .avatar { /* This controls the maximum size. You can change --avatar-size above without changing anything else. */ width: min( var(--avatar-size), 40vw ); height: min( var(--avatar-size), 40vw ); margin: 0 auto 18px; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #111; border: 4px solid #555; box-shadow: 4px 4px 0 #000, inset 0 0 0 2px #888; image-rendering: pixelated; } /* ========================================================= AVATAR IMAGE ========================================================= */ /* This is intentionally NOT using fixed dimensions. Any image can be placed here: - 100x100 - 500x500 - 1920x1080 - portrait - landscape - Minecraft skin - PNG - JPG - GIF It will fit inside the box without stretching. */ .avatar img { display: block; width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; image-rendering: auto; background: #111; } /* If you use a Minecraft pixel-art image, you can enable this instead: image-rendering: pixelated; */ /* ========================================================= USERNAME ========================================================= */ .username { position: relative; margin: 0; font-size: 30px; line-height: 1.2; color: var(--minecraft-yellow); text-shadow: 3px 3px 0 #3f3f00, 5px 5px 0 rgba(0, 0, 0, 0.5); word-break: break-word; } /* ========================================================= STATUS ========================================================= */ .status { margin-top: 8px; color: var(--text-muted); font-size: 12px; line-height: 1.5; text-shadow: 2px 2px 0 #000; } /* ========================================================= BIO ========================================================= */ .bio { max-width: 360px; margin: 20px auto; color: #ddd; font-size: 13px; line-height: 1.7; text-shadow: 2px 2px 0 #000; } /* ========================================================= LINK CONTAINER ========================================================= */ .links { width: 100%; display: flex; flex-direction: column; gap: 9px; margin-top: 20px; } /* ========================================================= MINECRAFT BUTTONS ========================================================= */ .profile-button { width: 100%; min-height: 42px; padding: 10px 14px; display: flex; align-items: center; justify-content: center; position: relative; color: #fff; background: linear-gradient( #6b6b6b 0%, #555 45%, #444 50%, #333 100% ); border: 2px solid #111; box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.25), inset -2px -2px 0 rgba(0, 0, 0, 0.5); text-decoration: none; font-size: 13px; text-shadow: 2px 2px 0 #000; transition: transform 0.08s ease, filter 0.08s ease; } /* Button hover */ .profile-button:hover { color: #ffff55; filter: brightness(1.15); transform: translateY(-1px); box-shadow: inset 2px 2px 0 rgba(255, 255, 255, 0.3), inset -2px -2px 0 rgba(0, 0, 0, 0.6), 0 3px 0 #000; } /* Button click */ .profile-button:active { transform: translateY(2px); box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.5); } /* ========================================================= SOCIAL BUTTONS ========================================================= */ .social-links { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 18px; } /* Generic social button */ .social-button { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; position: relative; background: linear-gradient( #666, #333 ); border: 2px solid #111; box-shadow: inset 2px 2px 0 rgba(255,255,255,0.2), inset -2px -2px 0 rgba(0,0,0,0.5), 2px 2px 0 #000; color: white; text-decoration: none; image-rendering: pixelated; transition: transform 0.1s ease, filter 0.1s ease; } .social-button:hover { transform: translateY(-3px); filter: brightness(1.2); } .social-button:active { transform: translateY(1px); } /* ========================================================= SOCIAL ICONS ========================================================= */ /* If you have actual image icons, these will use them. If you don't, the text/icon fallback still works. */ .social-button img { width: 28px; height: 28px; object-fit: contain; } /* ========================================================= FOOTER ========================================================= */ .footer { margin-top: 22px; color: #777; font-size: 9px; line-height: 1.5; text-shadow: 1px 1px 0 #000; } /* ========================================================= PANORAMA BUTTON ========================================================= */ .panorama-button { position: fixed; right: 15px; bottom: 15px; width: 34px; height: 34px; display: block; background: linear-gradient( #666, #333 ); border: 2px solid #111; box-shadow: 2px 2px 0 #000; z-index: 10; image-rendering: pixelated; } .panorama-button:hover { filter: brightness(1.25); } /* ========================================================= RESPONSIVE ========================================================= */ @media (max-width: 600px) { :root { --card-width: 420px; } .profile-wrapper { padding: 25px 15px; } .profile-card { padding: 28px 22px; } .username { font-size: 25px; } .bio { font-size: 12px; } } /* ========================================================= SMALL PHONES ========================================================= */ @media (max-width: 400px) { .profile-wrapper { padding: 15px 10px; } .profile-card { padding: 25px 17px; } .username { font-size: 22px; } .status { font-size: 10px; } .bio { font-size: 11px; margin-top: 15px; margin-bottom: 15px; } .profile-button { min-height: 38px; font-size: 11px; } .social-button { width: 42px; height: 42px; } } /* ========================================================= REDUCED MOTION ========================================================= */ @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
-    </style>
+    
+<style>
+    /* =========================================
+       MINECRAFT PROFILE PAGE
+       ========================================= */
+
+    :root {
+        --card-width: 430px;
+        --avatar-size: 120px;
+
+        --text: #ffffff;
+        --muted: #aaaaaa;
+        --yellow: #ffff55;
+        --dark: #222222;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* =========================================
+       PROFILE CONTAINER
+       ========================================= */
+
+    .profile-wrapper {
+        min-height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 30px 15px;
+    }
+
+
+    /* =========================================
+       PROFILE CARD
+       ========================================= */
+
+    .profile-card {
+        width: var(--card-width);
+        max-width: 100%;
+
+        padding: 32px;
+
+        text-align: center;
+
+        /*
+         * Minecraft GUI border.
+         */
+        border-image-source: url('assets/guimenu.png');
+        border-image-slice: 128 fill;
+        border-image-width: 64px;
+        border-image-repeat: stretch;
+
+        image-rendering: pixelated;
+    }
+
+
+    /* =========================================
+       AVATAR
+       ========================================= */
+
+    .avatar {
+        /*
+         * Change this one value if you want
+         * the avatar bigger or smaller.
+         *
+         * Example:
+         * 80px
+         * 100px
+         * 150px
+         * 200px
+         */
+        width: var(--avatar-size);
+        height: var(--avatar-size);
+
+        margin: 0 auto 18px;
+
+        /*
+         * Keeps ANY image inside the box.
+         */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /*
+         * Prevents oversized images from
+         * breaking the profile card.
+         */
+        overflow: hidden;
+
+        background: #111;
+
+        /*
+         * Minecraft-style border.
+         */
+        border: 4px solid #555;
+
+        box-shadow:
+            4px 4px 0 #222,
+            inset 0 0 0 2px #aaa;
+
+        /*
+         * Makes pixel art look sharp.
+         */
+        image-rendering: pixelated;
+
+        /*
+         * Makes the avatar square even if
+         * the original image isn't square.
+         */
+        aspect-ratio: 1 / 1;
+    }
+
+
+    /*
+     * IMAGE BEHAVIOR
+     *
+     * contain = shows the entire image
+     * without stretching/cropping it.
+     *
+     * This works with:
+     * - PNG
+     * - JPG
+     * - WEBP
+     * - Minecraft skins
+     * - screenshots
+     * - artwork
+     * - square images
+     * - landscape images
+     * - portrait images
+     */
+
+    .avatar img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: contain;
+        object-position: center;
+
+        image-rendering: auto;
+
+        /*
+         * Prevents the browser from allowing
+         * the image to escape the avatar box.
+         */
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+
+    /* =========================================
+       OPTIONAL: PIXEL ART MODE
+       =========================================
+       
+       If you are using Minecraft pixel art,
+       add class="pixel-art" to the image.
+       
+       Example:
+       <img class="pixel-art" src="assets/avatar.png">
+    */
+
+    .avatar img.pixel-art {
+        image-rendering: pixelated;
+    }
+
+
+    /* =========================================
+       USERNAME
+       ========================================= */
+
+    .username {
+        margin: 0;
+
+        font-size: 32px;
+        line-height: 1.2;
+
+        color: var(--yellow);
+
+        text-shadow:
+            3px 3px 0 #3f3f15;
+
+        word-wrap: break-word;
+    }
+
+
+    /* =========================================
+       STATUS
+       ========================================= */
+
+    .status {
+        margin-top: 5px;
+
+        color: var(--muted);
+
+        font-size: 14px;
+
+        text-shadow:
+            2px 2px 0 #222;
+    }
+
+
+    /* =========================================
+       BIO
+       ========================================= */
+
+    .bio {
+        max-width: 350px;
+
+        margin: 22px auto;
+
+        color: var(--text);
+
+        font-size: 15px;
+        line-height: 1.7;
+
+        text-shadow:
+            2px 2px 0 #222;
+    }
+
+
+    /* =========================================
+       MAIN LINKS
+       ========================================= */
+
+    .links {
+        display: grid;
+
+        gap: 8px;
+
+        margin-top: 20px;
+    }
+
+
+    .profile-button {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 40px;
+
+        padding: 8px 12px;
+
+        background-image:
+            url('assets/btn-minecraft.png');
+
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        image-rendering: pixelated;
+
+        color: #ffffff;
+
+        text-decoration: none;
+
+        font-size: 14px;
+
+        text-shadow:
+            2px 2px 0 #000;
+
+        transition:
+            filter 0.1s ease,
+            transform 0.1s ease;
+    }
+
+
+    .profile-button:hover {
+        background-image:
+            url('assets/btn-minecraft-hover.png');
+
+        color: var(--yellow);
+
+        filter: brightness(1.05);
+
+        transform: translateY(-1px);
+    }
+
+
+    .profile-button:active {
+        transform: translateY(1px);
+    }
+
+
+    /* =========================================
+       SOCIAL LINKS
+       ========================================= */
+
+    .social-links {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+
+        margin-top: 18px;
+    }
+
+
+    .social-button {
+        width: 64px;
+        height: 64px;
+
+        display: block;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        image-rendering: pixelated;
+
+        transition:
+            transform 0.1s ease,
+            filter 0.1s ease;
+    }
+
+
+    .social-button:hover {
+        transform: translateY(-3px);
+
+        filter: brightness(1.1);
+    }
+
+
+    /* =========================================
+       GITHUB
+       ========================================= */
+
+    .github {
+        background-image:
+            url('assets/btn-github.png');
+    }
+
+    .github:hover {
+        background-image:
+            url('assets/btn-github-hover.png');
+    }
+
+
+    /* =========================================
+       YOUTUBE
+       ========================================= */
+
+    .youtube {
+        background-image:
+            url('assets/btn-youtube.png');
+    }
+
+    .youtube:hover {
+        background-image:
+            url('assets/btn-youtube-hover.png');
+    }
+
+
+    /* =========================================
+       PATREON
+       ========================================= */
+
+    .patreon {
+        background-image:
+            url('assets/btn-patreon.png');
+    }
+
+    .patreon:hover {
+        background-image:
+            url('assets/btn-patreon-hover.png');
+    }
+
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+
+    .footer {
+        margin-top: 22px;
+
+        color: #777777;
+
+        font-size: 10px;
+
+        text-shadow:
+            1px 1px 0 #222;
+    }
+
+
+    /* =========================================
+       MOBILE
+       ========================================= */
+
+    @media screen and (max-width: 530px) {
+
+        :root {
+            --avatar-size: 100px;
+        }
+
+        .profile-wrapper {
+            padding: 20px 12px;
+        }
+
+        .profile-card {
+            width: 100%;
+
+            padding: 26px 22px;
+        }
+
+        .username {
+            font-size: 26px;
+        }
+
+        .bio {
+            font-size: 13px;
+        }
+
+        .profile-button {
+            font-size: 12px;
+        }
+
+        .social-button {
+            width: 56px;
+            height: 56px;
+        }
+    }
+
+
+    /* =========================================
+       VERY SMALL PHONES
+       ========================================= */
+
+    @media screen and (max-width: 360px) {
+
+        :root {
+            --avatar-size: 85px;
+        }
+
+        .profile-card {
+            padding: 22px 16px;
+        }
+
+        .username {
+            font-size: 23px;
+        }
+    }
+</style>
+
 </head>
 
 
