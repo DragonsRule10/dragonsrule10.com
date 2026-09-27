@@ -1,591 +1,373 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tristin Korbel | IT & Technology</title>
+    <title>DragonsRule10</title>
 
     <meta
         name="description"
-        content="Portfolio of Tristin Korbel — IT, networking, cybersecurity, homelab, and technology projects."
+        content="DragonsRule10's personal page."
     >
 
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="style.css">
 
     <style>
-        :root {
-            --background: #0b0d10;
-            --surface: #12161c;
-            --surface-hover: #181e26;
-            --border: #252c36;
-            --text: #f1f5f9;
-            --muted: #9ca3af;
-            --accent: #60a5fa;
-            --accent-hover: #93c5fd;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        /* ================================
+           PROFILE PAGE
+           ================================ */
 
         body {
-            background: var(--background);
-            color: var(--text);
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .container {
-            width: min(1100px, 90%);
-            margin: auto;
-        }
-
-        /* Navigation */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(11, 13, 16, 0.9);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-        }
-
-        nav {
-            height: 70px;
+        .profile-wrapper {
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            padding: 30px 15px;
         }
 
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
-
-        .logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--text);
-        }
-
-        /* Hero */
-
-        .hero {
-            min-height: calc(100vh - 70px);
-            display: flex;
-            align-items: center;
-            padding: 80px 0;
-        }
-
-        .hero-content {
-            max-width: 750px;
-        }
-
-        .eyebrow {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            line-height: 1.05;
-            margin-bottom: 25px;
-        }
-
-        .hero h1 span {
-            color: var(--accent);
-        }
-
-        .hero p {
-            color: var(--muted);
-            font-size: 1.2rem;
-            max-width: 650px;
-            margin-bottom: 30px;
-        }
-
-        .buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border);
-            background: var(--surface);
-            transition: 0.2s ease;
-        }
-
-        .button:hover {
-            background: var(--surface-hover);
-            border-color: var(--accent);
-        }
-
-        .button.primary {
-            background: var(--accent);
-            color: #07111f;
-            border-color: var(--accent);
-            font-weight: 600;
-        }
-
-        .button.primary:hover {
-            background: var(--accent-hover);
-        }
-
-        /* Sections */
-
-        section {
-            padding: 90px 0;
-            border-top: 1px solid var(--border);
-        }
-
-        .section-title {
-            margin-bottom: 40px;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
-            margin-bottom: 8px;
-        }
-
-        .section-title p {
-            color: var(--muted);
-        }
-
-        /* About */
-
-        .about {
-            max-width: 800px;
-        }
-
-        .about p {
-            color: var(--muted);
-            margin-bottom: 15px;
-            font-size: 1.05rem;
-        }
-
-        /* Skills */
-
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-        }
-
-        .skill {
-            padding: 20px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-        }
-
-        .skill h3 {
-            margin-bottom: 8px;
-        }
-
-        .skill p {
-            color: var(--muted);
-            font-size: 0.95rem;
-        }
-
-        /* Projects */
-
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .project {
-            padding: 25px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            transition: transform 0.2s ease, border-color 0.2s ease;
-        }
-
-        .project:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent);
-        }
-
-        .project h3 {
-            margin-bottom: 10px;
-        }
-
-        .project p {
-            color: var(--muted);
-            margin-bottom: 15px;
-        }
-
-        .project a {
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        /* Contact */
-
-        .contact {
+        .profile-card {
+            width: 430px;
+            max-width: 100%;
             text-align: center;
-            max-width: 650px;
-            margin: auto;
+
+            padding: 28px;
+
+            border-image: url('assets/guimenu.png');
+            border-image-slice: 128 128 fill;
+            border-image-width: 64px;
+
+            image-rendering: pixelated;
         }
 
-        .contact p {
-            color: var(--muted);
-            margin-bottom: 25px;
+        /* Avatar */
+
+        .avatar {
+            width: 96px;
+            height: 96px;
+
+            margin: 0 auto 15px;
+
+            image-rendering: pixelated;
+
+            border: 4px solid #555;
+            box-shadow:
+                4px 4px 0 #222,
+                inset 0 0 0 2px #aaa;
+
+            background: #222;
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            image-rendering: pixelated;
+        }
+
+        /* Name */
+
+        .username {
+            margin: 0;
+
+            font-size: 32px;
+            line-height: 1.2;
+
+            color: #ffff55;
+
+            text-shadow:
+                3px 3px 0 #3f3f15;
+        }
+
+        .status {
+            margin-top: 4px;
+
+            color: #aaaaaa;
+            font-size: 14px;
+
+            text-shadow: 2px 2px 0 #222;
+        }
+
+        .bio {
+            margin: 22px auto;
+
+            max-width: 350px;
+
+            color: #ffffff;
+            font-size: 15px;
+            line-height: 1.7;
+
+            text-shadow: 2px 2px 0 #222;
+        }
+
+        /* Links */
+
+        .links {
+            display: grid;
+            gap: 8px;
+
+            margin-top: 20px;
+        }
+
+        .profile-button {
+            display: block;
+
+            width: 100%;
+            height: 40px;
+
+            line-height: 40px;
+
+            background-image: url('assets/btn-minecraft.png');
+            background-size: 100% 100%;
+
+            image-rendering: pixelated;
+
+            color: #ffffff;
+            text-decoration: none;
+
+            font-size: 14px;
+
+            text-shadow: 2px 2px 0 #000;
+
+            transition: filter 0.1s ease;
+        }
+
+        .profile-button:hover {
+            background-image: url('assets/btn-minecraft-hover.png');
+
+            color: #ffff55;
+
+            text-shadow: 2px 2px 0 #000;
+
+            filter: brightness(1.05);
+        }
+
+        /* Smaller links */
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+        .social-button {
+            width: 64px;
+            height: 64px;
+
+            display: block;
+
+            image-rendering: pixelated;
+            background-size: cover;
+
+            transition: transform 0.1s ease;
+        }
+
+        .social-button:hover {
+            transform: translateY(-3px);
+        }
+
+        .github {
+            background-image: url('assets/btn-github.png');
+        }
+
+        .github:hover {
+            background-image: url('assets/btn-github-hover.png');
+        }
+
+        .youtube {
+            background-image: url('assets/btn-youtube.png');
+        }
+
+        .youtube:hover {
+            background-image: url('assets/btn-youtube-hover.png');
+        }
+
+        .patreon {
+            background-image: url('assets/btn-patreon.png');
+        }
+
+        .patreon:hover {
+            background-image: url('assets/btn-patreon-hover.png');
         }
 
         /* Footer */
 
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 30px 0;
-            color: var(--muted);
-            text-align: center;
-            font-size: 0.9rem;
+        .footer {
+            margin-top: 22px;
+
+            color: #777;
+            font-size: 10px;
+
+            text-shadow: 1px 1px 0 #222;
         }
 
         /* Mobile */
 
-        @media (max-width: 650px) {
-            .nav-links {
-                gap: 14px;
-                font-size: 0.9rem;
+        @media screen and (max-width: 530px) {
+
+            .profile-card {
+                padding: 22px;
             }
 
-            .hero {
-                padding: 60px 0;
+            .avatar {
+                width: 80px;
+                height: 80px;
             }
 
-            section {
-                padding: 65px 0;
+            .username {
+                font-size: 26px;
             }
 
-            .hero h1 {
-                font-size: 3rem;
+            .bio {
+                font-size: 13px;
+            }
+
+            .profile-button {
+                font-size: 12px;
+            }
+
+            .social-button {
+                width: 56px;
+                height: 56px;
             }
         }
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <div class="container">
-        <nav>
-            <a href="#" class="logo">Dragons<span>Rule10</span></a>
-
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <!-- Background blur -->
+    <div class="backdrop-blur"></div>
 
 
-<main>
+    <main class="profile-wrapper">
 
-    <!-- Hero -->
+        <div class="profile-card">
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
+            <!--
+                PROFILE PICTURE
 
-                <div class="eyebrow">
-                    IT • Networking • Technology
-                </div>
+                Replace this with your Minecraft skin/avatar if you want.
+                Example:
+                assets/avatar.png
+            -->
 
-                <h1>
-                    Hi, I'm <span>Tristin.</span>
-                </h1>
-
-                <p>
-                    I'm an aspiring IT and cybersecurity professional who enjoys
-                    working with computers, networks, servers, and homelab projects.
-                    This website is a collection of the things I've built and learned.
-                </p>
-
-                <div class="buttons">
-                    <a href="#projects" class="button primary">
-                        View My Projects
-                    </a>
-
-                    <a
-                        href="https://github.com/DragonsRule10"
-                        class="button"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- About -->
-
-    <section id="about">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>About Me</h2>
-                <p>A little bit about what I do.</p>
+            <div class="avatar">
+                <img
+                    src="assets/avatar.png"
+                    alt="DragonsRule10"
+                    onerror="this.style.display='none'"
+                >
             </div>
 
-            <div class="about">
 
-                <p>
-                    I'm interested in information technology, networking,
-                    cybersecurity, system administration, and building useful
-                    technology projects.
-                </p>
+            <!-- Name -->
 
-                <p>
-                    A lot of my experience comes from hands-on projects,
-                    experimenting with hardware and software, and maintaining
-                    my own servers and network infrastructure.
-                </p>
+            <h1 class="username">
+                DragonsRule10
+            </h1>
 
-                <p>
-                    I'm currently working toward a career in IT and cybersecurity
-                    and enjoy learning something new whenever I can.
-                </p>
+            <div class="status">
+                ✦ IT • Homelab • Minecraft ✦
+            </div>
+
+
+            <!-- Bio -->
+
+            <p class="bio">
+                Just a guy who likes computers, servers,
+                networking, Minecraft, and building random
+                things that probably didn't need to be built.
+            </p>
+
+
+            <!-- Main links -->
+
+            <div class="links">
+
+                <a
+                    class="profile-button"
+                    href="https://github.com/DragonsRule10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+                <a
+                    class="profile-button"
+                    href="https://dragonsrule10.com"
+                >
+                    My Website
+                </a>
+
+                <a
+                    class="profile-button"
+                    href="https://discord.com/users/956007823261700107"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Discord
+                </a>
+
+                <a
+                    class="profile-button"
+                    href="https://steamcommunity.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Steam
+                </a>
 
             </div>
 
-        </div>
-    </section>
 
+            <!-- Social icons -->
 
-    <!-- Skills -->
+            <div class="social-links">
 
-    <section id="skills">
-        <div class="container">
+                <a
+                    class="social-button github"
+                    href="https://github.com/DragonsRule10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                ></a>
 
-            <div class="section-title">
-                <h2>Skills & Interests</h2>
-                <p>Some of the areas I work with.</p>
+                <a
+                    class="social-button youtube"
+                    href="#"
+                    aria-label="YouTube"
+                ></a>
+
             </div>
 
-            <div class="skills">
 
-                <div class="skill">
-                    <h3>IT Support</h3>
-                    <p>
-                        PC troubleshooting, hardware, operating systems,
-                        software configuration, and technical support.
-                    </p>
-                </div>
-
-                <div class="skill">
-                    <h3>Networking</h3>
-                    <p>
-                        Network configuration, routing, VLANs, Wi-Fi,
-                        DNS, VPNs, and network troubleshooting.
-                    </p>
-                </div>
-
-                <div class="skill">
-                    <h3>Servers</h3>
-                    <p>
-                        Linux, virtualization, game servers, web services,
-                        storage, backups, and self-hosted applications.
-                    </p>
-                </div>
-
-                <div class="skill">
-                    <h3>Cybersecurity</h3>
-                    <p>
-                        Security fundamentals, network security,
-                        access control, monitoring, and secure infrastructure.
-                    </p>
-                </div>
-
-                <div class="skill">
-                    <h3>Web Development</h3>
-                    <p>
-                        HTML, CSS, JavaScript, Git, GitHub, and
-                        building simple web applications.
-                    </p>
-                </div>
-
-                <div class="skill">
-                    <h3>Homelab</h3>
-                    <p>
-                        Building and maintaining personal infrastructure
-                        for learning, testing, and experimentation.
-                    </p>
-                </div>
-
+            <div class="footer">
+                dragonsrule10.com
             </div>
 
         </div>
-    </section>
+
+    </main>
 
 
-    <!-- Projects -->
+    <!-- Panorama toggle -->
 
-    <section id="projects">
-        <div class="container">
-
-            <div class="section-title">
-                <h2>Projects</h2>
-                <p>Some of the things I've worked on.</p>
-            </div>
-
-            <div class="projects">
-
-                <article class="project">
-                    <h3>Homelab</h3>
-
-                    <p>
-                        A personal server environment used to experiment
-                        with virtualization, networking, storage, monitoring,
-                        and self-hosted services.
-                    </p>
-
-                    <a href="https://github.com/DragonsRule10" target="_blank" rel="noopener noreferrer">
-                        View on GitHub →
-                    </a>
-                </article>
-
-
-                <article class="project">
-                    <h3>Network Infrastructure</h3>
-
-                    <p>
-                        Hands-on networking projects involving routers,
-                        switches, wireless networks, VPNs, DNS, and
-                        network segmentation.
-                    </p>
-
-                    <a href="https://github.com/DragonsRule10" target="_blank" rel="noopener noreferrer">
-                        View Projects →
-                    </a>
-                </article>
-
-
-                <article class="project">
-                    <h3>Game Servers</h3>
-
-                    <p>
-                        Experience hosting and maintaining multiplayer
-                        game servers, including configuration, plugins,
-                        networking, and server administration.
-                    </p>
-
-                    <a href="https://github.com/DragonsRule10" target="_blank" rel="noopener noreferrer">
-                        View Projects →
-                    </a>
-                </article>
-
-
-                <article class="project">
-                    <h3>This Website</h3>
-
-                    <p>
-                        My personal portfolio website, hosted through
-                        GitHub Pages and built with HTML and CSS.
-                    </p>
-
-                    <a href="https://github.com/DragonsRule10/dragonsrule10.com" target="_blank" rel="noopener noreferrer">
-                        Source Code →
-                    </a>
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Contact -->
-
-    <section id="contact">
-        <div class="container">
-
-            <div class="contact">
-
-                <div class="section-title">
-                    <h2>Get In Touch</h2>
-                    <p>Want to find me somewhere else?</p>
-                </div>
-
-                <div class="buttons">
-
-                    <a
-                        href="https://github.com/DragonsRule10"
-                        class="button primary"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        GitHub
-                    </a>
-
-                    <a
-                        href="https://discord.com/users/956007823261700107"
-                        class="button"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Discord
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-</main>
-
-
-<footer>
-    <div class="container">
-        © 2026 Tristin Korbel · DragonsRule10
-    </div>
-</footer>
+    <a
+        class="panorama-button"
+        href="#"
+        onclick="document.body.classList.toggle('static-panorama'); return false;"
+        aria-label="Toggle panorama"
+    ></a>
 
 </body>
 </html>
-```
